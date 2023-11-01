@@ -1,8 +1,12 @@
+with MicroBit.Ultrasonic;
+with MicroBit.MotorDriver; use MicroBit.MotorDriver;
+with DFR0548;
+with MicroBit.Types; use MicroBit.Types;
 with MicroBit.Console; use MicroBit.Console;
 use MicroBit;
 -- USN PROJECT TEMPLATE INTELLIGENT REAL-TIME SYSTEMS
--- Project name: [project name]
--- Project members: [name, name, .. ]
+-- Project name: Ada Auto Pioneers
+-- Project members: Thomas Lunde, Daniel Østmoen
 
 
 --This is a project template for a Jorvik profile (a less restrictive Ravenscar) for the MicroBit v2 such that we have a language supported real-time OS for embedded targets
@@ -18,10 +22,19 @@ use MicroBit;
 
 -- Open a View > Cross Platforms > Serial Ports to see Put_Line output. Set the baud rate to 115.200
 procedure Main with Priority => 0 is
+   package frontSensor is new Ultrasonic(MB_P16, MB_P0);
+   package leftSensor is new Ultrasonic(MB_P15, MB_P1);
+   package rightSensor is new Ultrasonic(MB_P14, MB_P2);
+
+   Distance : Distance_cm := 0;
 
 begin
-   Put_Line (" <-- The zero means: Let's get started ...");
-   loop
-      null;
+   Distance := frontSensor.Read;
+   while (Distance > 10) loop
+      Distance := frontSensor.Read;
+      Put_Line ("Front: " & Distance_cm'Image(Distance));
+      MotorDriver.Drive(Forward,(4095,4095,4095,4095));
+      delay 0.05;
    end loop;
+      MotorDriver.Drive(Stop);
 end Main;
