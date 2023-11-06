@@ -257,6 +257,8 @@ package ada_main is
    --  microbit.console%b
    --  microbit.iosfortasking%s
    --  microbit.iosfortasking%b
+   --  pid_controller%s
+   --  pid_controller%b
    --  main%b
    --  END ELABORATION ORDER
 
