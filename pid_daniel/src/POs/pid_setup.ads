@@ -1,10 +1,7 @@
-with MicroBit.Console; use MicroBit.Console;
-with MicroBit.IOsForTasking; use MicroBit.IOsForTasking;
-use MicroBit;
+package pid_setup is
 
-package pid_controller is
    type error_val is new Integer range -2 .. 2;
-
+   
    type line_pin_id is record
       Line_1 : Pin_Id;
       Line_2 : Pin_Id;
@@ -30,19 +27,14 @@ package pid_controller is
    end record;
 
 
-
-
-   --  procedure set_pins;
-   protected pid_call is
-      --  function get_constants return pid_const;
-      --  function get_error return error_val;
-      --  function get_PIDvalue return integer;
+   protected pid_set is
+      function get_constants return pid_const;
+      function get_error return error_val;
+      function get_PIDvalue return integer;
 
       procedure set_pins (Line1    : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id);
       procedure set_constants (K   : pid_const);
-      procedure get_error;
-      procedure set_pid;
-      --  procedure set_pid (error : error_val);
+      
    private
       Pin_Ids : line_pin_id;
       Pins                         : line_pins;
@@ -52,7 +44,6 @@ package pid_controller is
       error                        : error_val := 0;
       previousError                : error_val := 0;
       PIDvalue                     : integer := 0;
-   end pid_call;
+   end pid_set;
 
-
-   end pid_controller;
+end pid_setup;

@@ -4,13 +4,15 @@ package body pid_controller is
       
       procedure set_pins (Line1 : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id) is
       begin
+         Pin_Ids := (Line_1 => Line1, Line_2 => Line2, Line_3 => Line3);
+         
          Pins.LineTrack1 := Set (Line1);
          Pins.LineTrack2 := Set (Line2);
          Pins.LineTrack3 := Set (Line3);
       
-         Console.Put(Pins.LineTrack1'Image);
-         Console.Put(Pins.LineTrack2'Image);
-         Console.Put(Pins.LineTrack3'Image);
+         --  Console.Put(Pins.LineTrack1'Image);
+         --  Console.Put(Pins.LineTrack2'Image);
+         --  Console.Put(Pins.LineTrack3'Image);
       end set_pins;
    
       procedure set_constants (K : pid_const) is
