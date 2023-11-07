@@ -1,13 +1,10 @@
-with pid_controller; use pid_controller;
+with pid_sense;
+with pid_think;
 
 procedure Main is
 
 begin
-   pid_call.set_pins (0, 1, 2);
-   pid_call.set_constants (K => (50, 50, 50));
-
    loop
-      pid_call.get_error;
-      delay 0.5;
+      null;
    end loop;
 end Main;

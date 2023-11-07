@@ -175,8 +175,6 @@ package ada_main is
    --  system.assertions%b
    --  system.pool_global%s
    --  system.pool_global%b
-   --  system.relative_delays%s
-   --  system.relative_delays%b
    --  system.tasking.protected_objects%s
    --  system.tasking.protected_objects%b
    --  system.tasking.restricted%s
@@ -257,8 +255,12 @@ package ada_main is
    --  microbit.console%b
    --  microbit.iosfortasking%s
    --  microbit.iosfortasking%b
-   --  pid_controller%s
-   --  pid_controller%b
+   --  pid_setup%s
+   --  pid_setup%b
+   --  pid_sense%s
+   --  pid_sense%b
+   --  pid_think%s
+   --  pid_think%b
    --  main%b
    --  END ELABORATION ORDER
 
