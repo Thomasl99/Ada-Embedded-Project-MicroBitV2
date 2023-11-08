@@ -17,6 +17,13 @@ package body pid_setup is
          return PIDvalue;
       end get_PIDvalue;
       
+      function Elapsed_Time return Float is
+         comp_time : Time_Span := Clock - Last_Time;
+      begin
+         Console.Put(To_Duration(comp_time)'Image);
+         return Float(To_Duration(comp_time));
+      end Elapsed_Time;
+      
       
       procedure set_pins (V : line_pin_id) is
       begin
@@ -35,13 +42,6 @@ package body pid_setup is
       begin
          Constants := K;
       end set_constants;
-      
-      function Elapsed_Time return Float is
-         comp_time : Time_Span := Clock - Last_Time;
-      begin
-         Console.Put(To_Duration(comp_time)'Image);
-         return Float(To_Duration(comp_time));
-      end Elapsed_Time;
       
       procedure set_error is 
       begin
