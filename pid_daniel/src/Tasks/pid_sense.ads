@@ -3,6 +3,6 @@ with Ada.Real_Time; use Ada.Real_Time;
 
 package pid_sense is
    
-   task sense_task with Priority => 2;
+   task sense_task with Priority => 1;
    
 end pid_sense;

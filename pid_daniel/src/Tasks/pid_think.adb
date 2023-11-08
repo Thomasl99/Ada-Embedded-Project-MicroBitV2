@@ -6,7 +6,7 @@ package body pid_think is
       loop
          myClock := Clock;
          pid_set.set_pid;
-         delay until myClock + Milliseconds(200);
+         delay until myClock + Milliseconds(1000);
       end loop;
    end pidCalc_task;
       

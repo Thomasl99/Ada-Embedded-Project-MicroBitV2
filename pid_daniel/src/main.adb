@@ -1,7 +1,7 @@
 with pid_sense;
 with pid_think;
 
-procedure Main is
+procedure Main with Priority => 0 is
 
 begin
    loop

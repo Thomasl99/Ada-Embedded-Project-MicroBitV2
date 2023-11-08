@@ -12,7 +12,7 @@ package body pid_setup is
          return error;
       end get_error;
       
-      function get_PIDvalue return integer is
+      function get_PIDvalue return Float is
       begin
          return PIDvalue;
       end get_PIDvalue;
@@ -36,9 +36,15 @@ package body pid_setup is
          Constants := K;
       end set_constants;
       
+      function Elapsed_Time return Float is
+         comp_time : Time_Span := Clock - Last_Time;
+      begin
+         Console.Put(To_Duration(comp_time)'Image);
+         return Float(To_Duration(comp_time));
+      end Elapsed_Time;
+      
       procedure set_error is 
       begin
-         Console.Put ("Start of setup");
          if set (Pin_Ids.Line_3) = false and set (Pin_Ids.Line_2) = false and set (Pin_Ids.Line_1) = true then
             lost_track := false;
             error := 2;
@@ -59,6 +65,10 @@ package body pid_setup is
             lost_track := false;
             error := -2;
             Console.Put ("HLL ");
+         elsif set (Pin_Ids.Line_3) = true and set (Pin_Ids.Line_2) = true and set (Pin_Ids.Line_1) = true then
+            lost_track := false;
+            line_high := true;
+            Console.Put ("HHH ");
          else
             lost_track := true;
             Console.Put ("LLL    : Lost Track");
@@ -68,16 +78,23 @@ package body pid_setup is
          --  delay(0.1);
          
       end set_error;
+      
+      procedure set_Last_Time is
+      begin
+         Last_Time := Clock;
+      end set_Last_Time;
          
       procedure set_pid is
          --  error_int           : Integer := error_val;
       begin 
          --  PID_calc.I := PID_calc.I + Integer(error);
          PID_calc := ( P => error,
-                       I => PID_calc.I + Integer(error),
-                       D => Integer(error) - Integer(previousError));
+                       I => PID_calc.I + Float(error),
+                       D => Float(error) - Float(previousError) / Elapsed_Time);
          
-         PIDvalue := (Constants.Kp*Integer(PID_calc.P)) + (Constants.Ki*PID_calc.I) + (Constants.Kd*PID_calc.D);
+         PIDvalue := (Constants.Kp*Float(PID_calc.P)) + (Constants.Ki*PID_calc.I) + (Constants.Kd*PID_calc.D);
+         previousError := error;
+         Last_Time := Clock;
          Console.Put (PIDvalue'Image);
       end set_pid;
       

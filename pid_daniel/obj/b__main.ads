@@ -40,10 +40,13 @@ package ada_main is
    --  system.bb.mcu_parameters%s
    --  system.bb.parameters%s
    --  system.exceptions%s
+   --  system.float_control%s
+   --  system.float_control%b
    --  system.img_int%s
    --  system.machine_code%s
    --  system.parameters%s
    --  system.parameters%b
+   --  system.powten_flt%s
    --  system.semihosting%s
    --  system.semihosting%b
    --  system.storage_elements%s
@@ -68,6 +71,9 @@ package ada_main is
    --  system.traceback_entries%b
    --  system.unsigned_types%s
    --  interfaces.nrf52.rtc%s
+   --  system.img_uns%s
+   --  system.img_util%s
+   --  system.img_util%b
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_jis%s
@@ -76,6 +82,7 @@ package ada_main is
    --  system.wch_cnv%b
    --  system.address_image%s
    --  system.address_image%b
+   --  system.exn_lli%s
    --  system.traceback%s
    --  system.traceback%b
    --  ada.strings.utf_encoding%s
@@ -153,12 +160,16 @@ package ada_main is
    --  ada.assertions%b
    --  ada.streams%s
    --  ada.streams%b
+   --  system.arith_64%s
+   --  system.arith_64%b
    --  system.fat_flt%s
    --  system.fat_lflt%s
    --  system.fat_llf%s
    --  system.finalization_root%s
    --  system.finalization_root%b
    --  ada.finalization%s
+   --  system.img_fixed_64%s
+   --  system.img_flt%s
    --  system.storage_pools%s
    --  system.storage_pools%b
    --  system.finalization_masters%s
