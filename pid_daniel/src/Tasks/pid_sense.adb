@@ -3,7 +3,7 @@ package body pid_sense is
    task body sense_task is
       myClock : Time;
    begin
-      pid_set.set_pins (0, 1, 2);
+      pid_set.set_pins (V => (0, 1, 2));
       pid_set.set_constants (K => (50, 50, 50));
       loop
          myClock := Clock;

@@ -18,10 +18,10 @@ package body pid_setup is
       end get_PIDvalue;
       
       
-      procedure set_pins (Line1  : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id) is
+      procedure set_pins (V : line_pin_id) is
       begin
-         Pin_Ids := (Line_1 => Line1, Line_2 => Line2, Line_3 => Line3);
-         
+         --  Pin_Ids := (Line_1 => Line1, Line_2 => Line2, Line_3 => Line3);
+         Pin_Ids := V;
          --  Pins.LineTrack1 := Set (Line1);
          --  Pins.LineTrack2 := Set (Line2);
          --  Pins.LineTrack3 := Set (Line3);

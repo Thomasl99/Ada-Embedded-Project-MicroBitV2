@@ -39,7 +39,8 @@ package pid_setup is
       function get_error return error_val;
       function get_PIDvalue return Integer;
 
-      procedure set_pins (Line1    : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id);
+      --  procedure set_pins (Line1    : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id);
+      procedure set_pins (V : line_pin_id);
       procedure set_constants (K   : pid_const);
       procedure set_error;
       procedure set_pid;
