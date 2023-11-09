@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_file>
+    <file_marker column=" 1" line=" 11" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 7" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 6" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 7" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 15" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 4" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 7" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\src\full\microbit-iosfortasking.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 34" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\src\full\microbit-motordriver.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\components\src\dfrobot\dfr0548\dfr0548.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 32" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\Ada_Drivers_Library\boards\MicroBit_v2\src\full\microbit-console.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 6" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 3" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_think.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\Tasks\pid_sense.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\pid_daniel.gpr</vfs_project>
+      <vfs_file>C:\Users\Thomas\Documents\git-repos\Ada-Embedded-Project-MicroBitV2\pid_daniel\src\POs\pid_setup.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
