@@ -1,0 +1,71 @@
+
+with MicroBit.Console; use MicroBit.Console;
+with MicroBit.IOsForTasking; use MicroBit.IOsForTasking;
+with Ada.Real_Time; use Ada.Real_Time;
+with HAL; use HAL;
+with MicroBit.Types; use MicroBit.Types;
+use MicroBit;
+
+package line_tracker_driver is
+
+   type error_val is new Integer range -2 .. 2;
+   
+   type line_pin_id is record
+      Line_1 : Pin_Id;
+      Line_2 : Pin_Id;
+      Line_3 : Pin_Id;
+   end record;
+
+   --  type line_pins is record
+   --     LineTrack1 : Boolean;
+   --     LineTrack2 : Boolean;
+   --     LineTrack3 : Boolean;
+   --  end record;
+
+   type pid_const is record
+      Kp : Float;
+      Ki : Float;
+      Kd : Float;
+   end record;
+
+   type pid_values is record
+      P : error_val := 0;
+      I : Float := 0.0;
+      D : Float := 0.0;
+   end record;
+
+   protected PID is
+      --  function get_pins return line_pins;
+      --  function get_constants return pid_const;
+      --  function get_pid_calc return pid_values;
+      function get_lost_track return Boolean;
+      function get_on_track return Boolean;
+      function get_error return error_val;
+      function get_PIDvalue return Float;
+      function get_elapsed_time return Float;
+
+      --  procedure set_pins (Line1    : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id);
+      procedure set_line_tracker_pins (V : line_pin_id);
+      procedure set_constants (K   : pid_const);
+      procedure set_error;
+      procedure set_last_time;
+      procedure set_PIDvalue;
+      
+   private
+      Pin_Ids       : line_pin_id;
+      --  Pins      : line_pins;
+      constants     : pid_const;
+      PID_calc      : pid_values;
+      lost_track    : Boolean := false;
+      on_track      : Boolean := false;
+      error         : error_val := 0;
+      previous_error : error_val := 0;
+      last_time     : Time;
+      PIDvalue      : Float;
+   end PID;
+
+
+
+   
+
+end brain_line_tracker;

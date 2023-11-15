@@ -1,68 +1,60 @@
-
 with MicroBit.Console; use MicroBit.Console;
+with Microbit.Ultrasonic;
+with Microbit.types; use Microbit.types;
 with MicroBit.IOsForTasking; use MicroBit.IOsForTasking;
-with Ada.Real_Time; use Ada.Real_Time;
-use MicroBit;
+with nRF.GPIO;
+use Microbit;
 
 package Brain is
-
-   type error_val is new Integer range -4 .. 4;
+   type ultrasonic_pin_id is record
+      sensor1_trigger : nRF.GPIO.GPIO_Point;
+      sensor1_echo : nRF.GPIO.GPIO_Point;
+      sensor2_trigger : nRF.GPIO.GPIO_Point;
+      sensor2_echo : nRF.GPIO.GPIO_Point;
+      sensor3_trigger : nRF.GPIO.GPIO_Point;
+      sensor3_echo : nRF.GPIO.GPIO_Point;  
+   end record;
    
-   type line_pin_id is record
-      Line_1 : Pin_Id;
-      Line_2 : Pin_Id;
-      Line_3 : Pin_Id;
+   type ultrasonic_measurements is record
+      sensor1 : Distance_cm;
+      sensor2 : Distance_cm;
+      sensor3 : Distance_cm;
    end record;
-
-   --  type line_pins is record
-   --     LineTrack1 : Boolean;
-   --     LineTrack2 : Boolean;
-   --     LineTrack3 : Boolean;
-   --  end record;
-
-   type pid_const is record
-      Kp : Float;
-      Ki : Float;
-      Kd : Float;
+   
+   type line_tracker_pin_id is record
+      line_tracker1 : Pin_Id;
+      line_tracker2 : Pin_Id;
+      line_tracker3 : Pin_Id;
    end record;
-
-   type pid_values is record
-      P : error_val;
-      I : Float;
-      D : Float;
+   type line_tracker_measurements is record
+      line_tracker1 : Boolean;
+      line_tracker2 : Boolean;
+      line_tracker3 : Boolean;
    end record;
+   
+   
+   protected US is
+      function get_measurements return ultrasonic_measurements;
 
-
-   protected brain_functions is
-      --  function get_pins return line_pins;
-      --  function get_constants return pid_const;
-      --  function get_pid_calc return pid_values;
-      function get_lost_track return Boolean;
-      function get_error return error_val;
-      function get_PIDvalue return Float;
-      function Elapsed_Time return Float;
-
-      --  procedure set_pins (Line1    : Pin_Id; Line2 : Pin_Id; Line3 : Pin_Id);
-      procedure set_pins (V : line_pin_id);
-      procedure set_constants (K   : pid_const);
-      procedure set_error;
-      procedure set_Last_Time;
-      procedure set_pid;
-      
+      procedure set_measurements;
+      procedure set_pins (V : ultrasonic_pin_id);
    private
-      Pin_Ids : line_pin_id;
-      --  Pins                         : line_pins;
-      Constants                    : pid_const;
-      PID_calc                     : pid_values;
-      lost_track                   : Boolean := false;
-      error                        : error_val := 0;
-      previousError                : error_val := 0;
-      Last_Time : Time;
-      PIDvalue                     : Float;
-   end brain_functions;
+      pins : ultrasonic_pin_id;
+      measurements : ultrasonic_measurements;
+      
+   end US;
 
+   protected LT is
+      function get_measurements return line_tracker_measurements;
+      
+      procedure set_pins (V : line_tracker_pin_id);
+      procedure set_measurements;
+      
 
-
+   private
+      pins : line_tracker_pin_id;
+      measurements : line_tracker_measurements;
+         
+   end LT;
    
-
 end Brain;

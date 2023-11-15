@@ -3,13 +3,14 @@ package body Sense is
    task body sense_task is
       myClock : Time;
    begin
-      brain_functions.set_pins (V => (0, 1, 2));
-      brain_functions.set_constants (K => (35.0, 15.0, 5.0));
-      brain_functions.set_Last_Time;
+      US.set_pins((MB_P16,MB_P8,MB_P15,MB_P12,MB_P14,MB_P13));
+      LT.set_pins(V=> (0,1,2));
+      PID.set_constants(K => (2047.0, 0.0 , 0.0));
       loop
          myClock := Clock;
-         brain_functions.set_error;
-         delay until myClock + Milliseconds(25);
+         LT.set_measurements;
+         US.set_measurements;
+         delay until myClock + Milliseconds(50);
       end loop;
    end sense_task;
    

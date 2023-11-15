@@ -20,7 +20,7 @@ with Act;
 -- Open a View > Cross Platforms > Serial Ports to see Put_Line output. Set the baud rate to 115.200
 procedure Main with Priority => 0 is
 begin
-      loop
+   loop
       null;
    end loop;
 end Main;
