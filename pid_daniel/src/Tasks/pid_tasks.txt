@@ -1,3 +1,0 @@
-task: pid_sense = set_error
-task: pid_think = calculate pid
-task: pid_act = set speed/direction

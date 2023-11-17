@@ -18,41 +18,46 @@ package body Think is
          PID.calculate_PIDvalue;
          PIDvalue := PID.get_PIDvalue;
          current_error := PID.get_error;
+
          follow_line(PIDvalue,4095,current_error);
          avoid_obstacle(US_measurements.sensor1, US_measurements.sensor2,US_measurements.sensor3, boundary);
-         delay until myClock + Milliseconds(60);
+         delay until myClock + Milliseconds(50);
       end loop;
    end think_task;
 
    procedure avoid_obstacle (Front_Sensor : Distance_cm; Left_Sensor : Distance_cm; Right_Sensor : Distance_cm; Boundary : Distance_cm) is
+      direction : Directions;
+      speed : Speeds;
    begin
          if Front_Sensor > boundary and Left_Sensor > boundary and Right_Sensor > boundary then
             return;
          elsif Front_Sensor > boundary and Left_Sensor > boundary and Right_Sensor <= boundary then
-            WheelController.set_direction(Left);
-            WheelController.set_speed((4095,4095,4095,4095));
+            direction := Left;
+            speed := ((4095,4095,4095,4095));
          elsif Front_Sensor > boundary and Left_Sensor <= boundary and Right_Sensor > boundary then
-            WheelController.set_direction(Right);
-            WheelController.set_speed((4095,4095,4095,4095));
+           direction := Right;
+            speed := ((4095,4095,4095,4095));
          elsif Front_Sensor > boundary and Left_Sensor <= boundary and Right_Sensor <= boundary then
-            WheelController.set_direction(Forward);
-            WheelController.set_speed((4095,4095,4095,4095));
+            direction := Forward;
+            speed := ((4095,4095,4095,4095));
          elsif Front_Sensor <= boundary and Left_Sensor > boundary and Right_Sensor > boundary then
-            WheelController.set_direction(Backward);
-            WheelController.set_speed((4095,4095,4095,4095));
+            direction := Backward;
+            speed := ((4095,4095,4095,4095));
          elsif Front_Sensor <= boundary and Left_Sensor > boundary and Right_Sensor <= boundary then
-            WheelController.set_direction(Backward_Right);
-            WheelController.set_speed((4095,4095,4095,4095));
+           direction := Backward_Right;
+           speed := ((4095,4095,4095,4095));
          elsif Front_Sensor <= boundary and Left_Sensor <= boundary and Right_Sensor > boundary then
-            WheelController.set_direction(Backward_Left);
-            WheelController.set_speed((4095,4095,4095,4095));
+            direction := Backward_Left;
+            speed := ((4095,4095,4095,4095));
          elsif Front_Sensor <= boundary and Left_Sensor <= boundary and Right_Sensor <= boundary then
-            WheelController.set_direction(Stop);
-            WheelController.set_speed((4095,4095,4095,4095));
+            direction := Stop;
+            speed := ((0,0,0,0));
          else
-            WheelController.set_direction(Stop);
-            WheelController.set_speed((0,0,0,0));
-         end if;
+            direction := Stop;
+            speed := ((0,0,0,0));
+      end if;
+      WheelController.set_direction(direction);
+      WheelController.set_speed(speed);
       end avoid_obstacle;
 
    procedure  follow_line (PIDvalue : Float; max_speed : UInt12; error : Float) is
@@ -61,9 +66,9 @@ package body Think is
       direction : directions;
    begin
 --since MotorDriver take speed in as a UInt12, and the PID value can be negative we cannot cast the PIDvalue directly to UInt12, hence we need to create a local variable that is always positive, notideal but a workaround
-      if PIDvalue >= 0.0 and PIDvalue < 4095.0 then
+      if PIDvalue >= 0.0 and PIDvalue < Float(max_speed) then
          value := UInt12(PIDvalue);
-      elsif PIDvalue < 0.0 and PIDvalue > -4095.0 then
+      elsif PIDvalue < 0.0 and PIDvalue > Float(-max_speed) then
          value := UInt12((-1.0)*PIDvalue);
       else
          value := UInt12(max_speed);
@@ -71,11 +76,11 @@ package body Think is
 
       if PID.get_invalid = true then
          if PIDvalue >= 0.0 then
-            Put_Line("Rotating right");
+            --Put_Line("Rotating right");
             direction := Rotating_Right;
             speed := ((max_speed,max_speed,max_speed,max_speed));
          elsif PIDvalue < 0.0 then
-            Put_Line("Rotating left");
+            --Put_Line("Rotating left");
             direction := Rotating_Left;
             speed := ((max_speed,max_speed,max_speed,max_speed));
          end if;

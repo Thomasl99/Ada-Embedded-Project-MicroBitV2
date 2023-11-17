@@ -5,7 +5,6 @@ package body Act is
       direction : Directions := Stop;
       speed : Speeds := (4095,4095,4095,4095);
    begin
-
       loop
          myClock := Clock;
          direction := WheelController.get_direction;

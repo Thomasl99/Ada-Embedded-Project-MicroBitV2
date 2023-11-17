@@ -62,13 +62,12 @@ package body PID_Controller is
          delta_time := Now_Time - previous_time;
          
          PID_calc := ( P => constants.Kp*error,
-                       I => PID_calc.I + (constants.Ki*( error * Float(To_Duration(delta_time)))),
+                       I => PID_calc.I + (constants.Ki*(error * Float(To_Duration(delta_time)))),
                        D => constants.Kd*((error-previous_error)/Float(To_Duration(delta_time))));
          
          PIDvalue := (PID_calc.P + PID_calc.I + PID_calc.D);
          previous_error := error;
          previous_time := Now_Time;
-         Put_line (PIDvalue'Image & To_Duration(delta_time)'Image);
       end calculate_PIDvalue;
       
    end PID;

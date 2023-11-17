@@ -25,7 +25,7 @@ package PID_Controller is
 
       procedure set_constants (K   : pid_const);
       procedure set_error (V1 : Boolean; V2 : Boolean; V3 : Boolean);
-      procedure calculate_PIDvalue;
+      procedure  calculate_PIDvalue;
       
    private
       constants     : pid_const;
